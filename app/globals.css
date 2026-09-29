@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    color-scheme: dark;
+  }
+
+  body {
+    @apply bg-night text-slate-300 antialiased;
+  }
+
+  ::selection {
+    @apply bg-violet-500/40 text-white;
+  }
+}
+
+@layer components {
+  /* Glassmorphism-Karte */
+  .glass {
+    @apply rounded-2xl border border-white/10 bg-white/[0.06] shadow-glass backdrop-blur-xl;
+  }
+
+  .glass-hover {
+    @apply transition duration-300 hover:border-violet-400/30 hover:bg-white/[0.09];
+  }
+
+  .text-gradient {
+    @apply bg-brand-gradient bg-clip-text text-transparent;
+  }
+
+  .container-page {
+    @apply mx-auto w-full max-w-7xl px-6 lg:px-8;
+  }
+
+  .section {
+    @apply relative py-24 sm:py-32;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
