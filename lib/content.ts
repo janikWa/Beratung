@@ -5,9 +5,9 @@
  */
 
 export const site = {
-  name: "[Firmenname]",
-  legalName: "[Firmenname] UG (haftungsbeschränkt)",
-  email: "kontakt@[ihre-domain].de",
+  name: "Nablatix",
+  legalName: "Nablatix UG (haftungsbeschränkt)",
+  email: "kontakt@nablatix.de", // [prüfen: finale Domain]
   // Link zu Ihrem Buchungstool (z. B. Cal.com) – alternativ "mailto:"-Link
   bookingUrl: "#kontakt",
 };

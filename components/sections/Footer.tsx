@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="container-page flex flex-col gap-8 py-12 md:flex-row md:items-center md:justify-between">
         <div>
           <div className="flex items-center gap-2.5">
-            <Logo className="h-7 w-7" />
+            <Logo />
             <span className="font-semibold text-white">{site.name}</span>
           </div>
           <p className="mt-3 max-w-sm text-sm text-slate-400">{footer.tagline}</p>
