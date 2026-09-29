@@ -49,7 +49,7 @@ export default function Navbar() {
 
         <button
           type="button"
-          className="rounded-lg p-2 text-slate-300 hover:bg-white/5 md:hidden"
+          className="cursor-pointer rounded-lg p-2 text-slate-300 hover:bg-white/5 md:hidden"
           aria-label={open ? "Menü schließen" : "Menü öffnen"}
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}

@@ -5,7 +5,7 @@ import { site } from "@/lib/content";
 
 const inter = Inter({
   subsets: ["latin"],
-  variable: "--font-sans",
+  variable: "--font-inter",
   display: "swap",
 });
 

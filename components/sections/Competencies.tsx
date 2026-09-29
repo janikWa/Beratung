@@ -30,7 +30,7 @@ export default function Competencies() {
                 <article className="glass glass-hover group relative h-full overflow-hidden p-8">
                   <div className="absolute -right-16 -top-16 h-40 w-40 rounded-full bg-violet-500/10 blur-3xl transition duration-500 group-hover:bg-violet-500/20" />
                   <div className="relative">
-                    <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl border border-violet-400/20 bg-gradient-to-br from-violet-500/20 to-blue-500/10 text-violet-200">
+                    <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl border border-violet-400/20 bg-linear-to-br from-violet-500/20 to-blue-500/10 text-violet-200">
                       <Icon className="h-6 w-6" />
                     </div>
                     <h3 className="mt-6 text-xl font-semibold text-white">{c.title}</h3>

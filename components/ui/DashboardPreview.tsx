@@ -17,7 +17,7 @@ const pipeline = ["ERP", "CRM", "Sensorik", "Data Lake", "Modell", "Dashboard"];
 export default function DashboardPreview() {
   return (
     <div className="relative" aria-hidden>
-      <div className="absolute -inset-6 rounded-[2rem] bg-gradient-to-r from-violet-600/30 via-indigo-500/20 to-blue-600/30 opacity-60 blur-3xl" />
+      <div className="absolute -inset-6 rounded-4xl bg-linear-to-r from-violet-600/30 via-indigo-500/20 to-blue-600/30 opacity-60 blur-3xl" />
 
       <div className="glass relative overflow-hidden p-2 text-left">
         {/* Fensterleiste */}
@@ -32,7 +32,7 @@ export default function DashboardPreview() {
           {/* KPI-Kacheln */}
           <div className="grid gap-2 sm:grid-cols-3 lg:col-span-3">
             {kpis.map(({ icon: Icon, label, value, accent }) => (
-              <div key={label} className="rounded-xl border border-white/10 bg-white/[0.06] p-4">
+              <div key={label} className="rounded-xl border border-white/10 bg-white/6 p-4">
                 <div className="flex items-center gap-2 text-xs text-slate-400">
                   <Icon className="h-3.5 w-3.5" />
                   {label}
@@ -43,7 +43,7 @@ export default function DashboardPreview() {
           </div>
 
           {/* Flächendiagramm */}
-          <div className="rounded-xl border border-white/10 bg-white/[0.06] p-4 lg:col-span-2">
+          <div className="rounded-xl border border-white/10 bg-white/6 p-4 lg:col-span-2">
             <div className="mb-4 flex items-center justify-between">
               <span className="h-2.5 w-28 rounded-full bg-white/10" />
               <span className="h-2.5 w-14 rounded-full bg-violet-400/30" />
@@ -79,13 +79,13 @@ export default function DashboardPreview() {
           </div>
 
           {/* Balkendiagramm */}
-          <div className="rounded-xl border border-white/10 bg-white/[0.06] p-4">
+          <div className="rounded-xl border border-white/10 bg-white/6 p-4">
             <div className="mb-4 h-2.5 w-20 rounded-full bg-white/10" />
             <div className="flex h-36 items-end gap-1.5">
               {bars.map((h, i) => (
                 <motion.div
                   key={i}
-                  className="flex-1 rounded-t bg-gradient-to-t from-indigo-500/40 to-violet-400/80"
+                  className="flex-1 rounded-t bg-linear-to-t from-indigo-500/40 to-violet-400/80"
                   initial={{ height: 0 }}
                   animate={{ height: `${h}%` }}
                   transition={{ duration: 0.8, delay: 1 + i * 0.05, ease: "easeOut" }}
@@ -95,12 +95,12 @@ export default function DashboardPreview() {
           </div>
 
           {/* Pipeline */}
-          <div className="rounded-xl border border-white/10 bg-white/[0.06] p-4 lg:col-span-3">
+          <div className="rounded-xl border border-white/10 bg-white/6 p-4 lg:col-span-3">
             <div className="flex flex-wrap items-center gap-2 text-xs text-slate-300">
               {pipeline.map((step, i) => (
                 <div key={step} className="flex items-center gap-2">
-                  <span className="rounded-md border border-white/10 bg-white/[0.04] px-2.5 py-1">{step}</span>
-                  {i < pipeline.length - 1 && <span className="h-px w-4 bg-gradient-to-r from-violet-400/60 to-blue-400/60 sm:w-8" />}
+                  <span className="rounded-md border border-white/10 bg-white/4 px-2.5 py-1">{step}</span>
+                  {i < pipeline.length - 1 && <span className="h-px w-4 bg-linear-to-r from-violet-400/60 to-blue-400/60 sm:w-8" />}
                 </div>
               ))}
             </div>

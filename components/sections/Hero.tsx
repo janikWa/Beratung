@@ -25,7 +25,7 @@ export default function Hero() {
 
       <motion.div variants={container} initial="hidden" animate="show" className="container-page relative text-center">
         <motion.div variants={item} className="flex justify-center">
-          <span className="inline-flex items-center gap-2 rounded-full border border-violet-400/20 bg-violet-500/10 px-4 py-1.5 text-xs font-medium text-violet-200 backdrop-blur">
+          <span className="inline-flex items-center gap-2 rounded-full border border-violet-400/20 bg-violet-500/10 px-4 py-1.5 text-xs font-medium text-violet-200 backdrop-blur-sm">
             <span className="relative flex h-2 w-2">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-violet-400 opacity-60" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-violet-400" />
@@ -36,12 +36,12 @@ export default function Hero() {
 
         <motion.h1
           variants={item}
-          className="mx-auto mt-8 max-w-4xl text-4xl font-semibold leading-[1.08] tracking-tight text-white sm:text-6xl lg:text-7xl"
+          className="mx-auto mt-8 max-w-4xl text-4xl font-semibold leading-[1.08] tracking-tight text-white sm:text-6xl sm:leading-none lg:text-7xl"
         >
           {hero.headlineStart} <span className="text-gradient">{hero.headlineHighlight}</span>
         </motion.h1>
 
-        <motion.p variants={item} className="mx-auto mt-8 max-w-2xl text-lg leading-relaxed text-slate-300 sm:text-xl">
+        <motion.p variants={item} className="mx-auto mt-8 max-w-2xl text-lg leading-relaxed text-slate-300 sm:text-xl sm:leading-7">
           {hero.subheadline}
         </motion.p>
 
@@ -81,22 +81,22 @@ function HeroBackground({ animate }: { animate: boolean }) {
 
   return (
     <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
-      <div className="absolute inset-0 bg-grid-lines bg-[size:64px_64px] [mask-image:radial-gradient(ellipse_at_top,black_20%,transparent_70%)]" />
+      <div className="absolute inset-0 bg-grid-lines bg-size-[64px_64px] mask-[radial-gradient(ellipse_at_top,black_20%,transparent_70%)]" />
 
       <motion.div
         {...float([0, 80, -40], [0, 40, -20], 16)}
-        className="absolute left-[10%] top-[-10%] h-[36rem] w-[36rem] rounded-full bg-violet-600/45 blur-[130px]"
+        className="absolute left-[10%] top-[-10%] h-144 w-xl rounded-full bg-violet-600/45 blur-[130px]"
       />
       <motion.div
         {...float([0, -60, 30], [0, 60, 20], 20)}
-        className="absolute right-[5%] top-[5%] h-[32rem] w-[32rem] rounded-full bg-blue-600/40 blur-[130px]"
+        className="absolute right-[5%] top-[5%] h-128 w-lg rounded-full bg-blue-600/40 blur-[130px]"
       />
       <motion.div
         {...float([0, 40, -60], [0, -30, 40], 24)}
-        className="absolute left-[35%] top-[30%] h-[26rem] w-[26rem] rounded-full bg-indigo-500/30 blur-[120px]"
+        className="absolute left-[35%] top-[30%] h-104 w-104 rounded-full bg-indigo-500/30 blur-[120px]"
       />
 
-      <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-b from-transparent to-night" />
+      <div className="absolute inset-x-0 bottom-0 h-40 bg-linear-to-b from-transparent to-night" />
     </div>
   );
 }

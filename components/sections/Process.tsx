@@ -14,7 +14,7 @@ export default function Process() {
           {/* Vertikale Timeline-Linie */}
           <div
             aria-hidden
-            className="absolute bottom-0 left-6 top-0 w-px bg-gradient-to-b from-violet-500/0 via-violet-500/50 to-blue-500/0 lg:left-1/2 lg:-translate-x-1/2"
+            className="absolute bottom-0 left-6 top-0 w-px bg-linear-to-b from-violet-500/0 via-violet-500/50 to-blue-500/0 lg:left-1/2 lg:-translate-x-1/2"
           />
 
           {process.steps.map((step, i) => {

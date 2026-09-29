@@ -8,8 +8,8 @@ export default function GlowBackground({ position = "right" }: { position?: "lef
 
   return (
     <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
-      <div className={`absolute ${placement} h-[28rem] w-[28rem] rounded-full bg-violet-600/25 blur-[120px]`} />
-      <div className={`absolute ${placement} ml-40 mt-40 h-[22rem] w-[22rem] rounded-full bg-blue-600/20 blur-[120px]`} />
+      <div className={`absolute ${placement} h-112 w-md rounded-full bg-violet-600/25 blur-[120px]`} />
+      <div className={`absolute ${placement} ml-40 mt-40 h-88 w-88 rounded-full bg-blue-600/20 blur-[120px]`} />
     </div>
   );
 }

@@ -26,15 +26,15 @@ export default function About() {
 function FounderCard({ founder }: { founder: Founder }) {
   return (
     <article className="glass glass-hover group relative flex h-full flex-col overflow-hidden p-8 text-center">
-      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-violet-400/60 to-transparent" />
+      <div className="absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-violet-400/60 to-transparent" />
 
       <div className="relative mx-auto h-28 w-28">
-        <div className="absolute -inset-1 rounded-full bg-gradient-to-br from-violet-500 to-blue-500 opacity-60 blur-md transition duration-500 group-hover:opacity-90" />
+        <div className="absolute -inset-1 rounded-full bg-linear-to-br from-violet-500 to-blue-500 opacity-60 blur-md transition duration-500 group-hover:opacity-90" />
         <div className="relative h-28 w-28 overflow-hidden rounded-full border border-white/20 bg-slate-900">
           {founder.image ? (
             <Image src={founder.image} alt={founder.name} fill sizes="112px" className="object-cover" />
           ) : (
-            <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-violet-600/30 to-blue-600/30 text-2xl font-semibold text-white/80">
+            <div className="flex h-full w-full items-center justify-center bg-linear-to-br from-violet-600/30 to-blue-600/30 text-2xl font-semibold text-white/80">
               {initials(founder.name)}
             </div>
           )}

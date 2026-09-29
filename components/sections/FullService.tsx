@@ -11,12 +11,12 @@ export default function FullService() {
   return (
     <section id="full-service" className="section scroll-mt-16">
       <div className="container-page">
-        <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-gradient-to-br from-violet-950/40 via-night to-blue-950/40 p-8 sm:p-12 lg:p-16">
+        <div className="relative overflow-hidden rounded-4xl border border-white/10 bg-linear-to-br from-violet-950/40 via-night to-blue-950/40 p-8 sm:p-12 lg:p-16">
           {/* Hintergrund-Akzente */}
           <div aria-hidden className="pointer-events-none absolute inset-0">
             <div className="absolute -left-20 -top-20 h-80 w-80 rounded-full bg-violet-600/30 blur-[100px]" />
             <div className="absolute -bottom-20 -right-20 h-80 w-80 rounded-full bg-blue-600/30 blur-[100px]" />
-            <div className="absolute inset-0 bg-grid-lines bg-[size:48px_48px] [mask-image:linear-gradient(to_bottom,black,transparent)]" />
+            <div className="absolute inset-0 bg-grid-lines bg-size-[48px_48px] mask-[linear-gradient(to_bottom,black,transparent)]" />
           </div>
 
           <div className="relative grid gap-12 lg:grid-cols-5 lg:gap-16">
@@ -46,7 +46,7 @@ export default function FullService() {
                 return (
                   <FadeIn key={p.title} delay={0.1 + i * 0.1}>
                     <article className="glass glass-hover flex gap-5 p-6 sm:p-7">
-                      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-violet-500/25 to-blue-500/15 text-violet-200 ring-1 ring-inset ring-white/10">
+                      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-linear-to-br from-violet-500/25 to-blue-500/15 text-violet-200 ring-1 ring-inset ring-white/10">
                         <Icon className="h-6 w-6" />
                       </div>
                       <div>
